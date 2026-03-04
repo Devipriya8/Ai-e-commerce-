@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon Recommender</title>
+</head>
+<body>
+
+<h1>Amazon Store</h1>
+
+<form method="POST" action="/search">
+    <input type="text" name="query" placeholder="Search product...">
+    <button type="submit">Search</button>
+</form>
+
+<h3>Products:</h3>
+<ul>
+{% for product in products %}
+    <li>
+        <a href="/product/{{ product }}">{{ product }}</a>
+    </li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
